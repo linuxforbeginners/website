@@ -3,6 +3,7 @@
   Welcome to <strong>Linux for beginners</strong>!
   Learn how to get started with Linux easily on this website.
 </p>
+<% unless @article.nil? %>
 <h2 class="page-st">A random article</h2>
 <div class="trending">
   <h3 class="title"><%= link_to @article.title, @article %></h3>
@@ -11,3 +12,4 @@
     <%= link_to "Read", @article, class: "button" %>
   </div>
 </div>
+<% end %>
