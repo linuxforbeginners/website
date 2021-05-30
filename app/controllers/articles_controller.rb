@@ -15,8 +15,11 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+                                       :autolink => true, :space_after_headers => true)
 
     if @article.save
+      @article.update(body: markdown.render(article_params["body"]), title: article_params["title"])
       redirect_to @article
     else
       render :new
@@ -30,7 +33,10 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
 
-    if @article.update(article_params)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+                                       :autolink => true, :space_after_headers => true)
+
+    if @article.update(body: markdown.render(article_params["body"]), title: article_params["title"])
       redirect_to @article
     else
       render :edit
