@@ -1,4 +1,15 @@
 # Building Lfb
+## Notes
+This guide assumes that your operating system is Ubuntu 20.04, tested operating systems are below:
+```text
+Ubuntu:
+  20.04
+  18.04
+Debian:
+  10
+```
+Other operating systems are not targeted with this guide. There may be more operating systems supported in the future! (Contributions are always welcome)
+
 ## Prerequisites
 You will need the ruby version `2.7`, others are not tested and may not work.
 Install ruby using the following command:
