@@ -1,0 +1,12 @@
+{
+  "ruby.useBundler": true, //run non-lint commands with bundle exec
+  "ruby.useLanguageServer": true, // use the internal language server (see below)
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "ruby.format": "prettier",
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.intellisense": "rubyLocate",
+  "ruby.pathToBundler": "./bin/bundle",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

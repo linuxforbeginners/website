@@ -1,0 +1,13 @@
+<h1 class="title">Home</h1>
+<p class="intro">
+  Welcome to <strong>Linux for beginners</strong>!
+  Learn how to get started with Linux easily on this website.
+</p>
+<h2 class="page-st">A random article</h2>
+<div class="trending">
+  <h3 class="title"><%= link_to @article.title, @article %></h3>
+  <div class="desc"><%= @article.body.to_s[...50] %><% if @article.body.length > 50; %>...<% end %></div>
+  <div class="visitit">
+    <%= link_to "Read", @article, class: "button" %>
+  </div>
+</div>
